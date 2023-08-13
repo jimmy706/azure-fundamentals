@@ -1,3 +1,4 @@
+#cloud_computing #pricing_models 
 # What is Cloud Computing?
 Cloud computing is a paradigm of IT services delivered via the Internet, encompassing a range of services such as virtual machines, databases, and networking. Unlike traditional data centers that rely on local servers for processing tasks, cloud computing employs remote servers for communication. This eliminates the need for physical data centers, saving costs and providing the flexibility to expand IT infrastructure without the expense of setting up new physical facilities; cloud computing facilitates this seamlessly.
 # Shared responsibility model
@@ -9,8 +10,16 @@ With an on-premises datacenter, **you’re responsible for everything**. With cl
 
 
 ![IaaS, PaaS and SaaS](https://learn.microsoft.com/en-us/training/wwl-azure/describe-cloud-compute/media/shared-responsibility-b3829bfe.svg)
+## IaaS
+Give customer the maximum control over cloud resources. The cloud provider only have to maintain the underline physical hardware and network security. Everything else like OS, system configuration, database and storage, running environment, etc... the consumer will have to take the responsibility
+## PaaS
+In PaaS, the cloud provider responsible for physical hardware, networking, security OS, middleware, development tools and business intelligence that make up cloud services.
+> PaaS is well suited to provide a complete development environment without the headache of maintaining all the development infrastructure.
 
-# Cloud Models
+## SaaS
+Software as a service (SaaS) is the most complete cloud service model from a product perspective. With SaaS, you’re essentially renting or using a fully developed application. Email, financial software, messaging applications, and connectivity software are all common examples of a SaaS implementation.
+> While the SaaS model may be the least flexible, it’s also the easiest to get up and running. It requires the least amount of technical knowledge or expertise to fully employ.
+# Cloud Deployment Models
 ## Private Cloud
 The private cloud is the evolution of on-prem datacenter. The organizations have the full control over private cloud but required them to hosted on-site or off-site and use remote control. 
 While on-premise refers to traditional infrastructure where everything is physically located within the organization, a private cloud is a virtualized environment that offers the benefits of cloud computing but is exclusively dedicated to a single organization, providing increased control and security.
@@ -32,7 +41,7 @@ When you’re architecting your solution, you’ll need to account for service a
 ## Scalability
 Scalability refers to the ability to adjust resources to meet demand. If you suddenly experience peak traffic and your systems are overwhelmed, the ability to scale means you can add more resources to better handle the increased demand.
 
-The other benefit of scalability is that you aren't overpaying for services. Because the cloud is a consumption-based model, you only pay for what you use. If demand drops off, you can reduce your resources and thereby reduce your costs.
+The other benefit of scalability is that you aren't overpaying for services. Because the cloud is a [[Describe Consumption and fixed cost models#Consumption based model|consumption-based model]] , you only pay for what you use. If demand drops off, you can reduce your resources and thereby reduce your costs.
 ### Vertical scaling
 
 With vertical scaling, if you were developing an app and you needed more processing power, you could vertically scale up to add more CPUs or RAM to the virtual machine. Conversely, if you realized you had over-specified the needs, you could vertically scale down by lowering the CPU or RAM specifications.
@@ -48,6 +57,9 @@ Predictability can be focused on performance predictability or cost predictabili
 Performance predictability focuses on predicting the resources needed to deliver a positive experience for your customers. Autoscaling, load balancing, and high availability are just some of the cloud concepts that support performance predictability. If you suddenly need more resources, autoscaling can deploy additional resources to meet the demand, and then scale back when the demand drops. Or if the traffic is heavily focused on one area, load balancing will help redirect some of the overload to less stressed areas.
 ### Cost
 Cost predictability is focused on predicting or forecasting the cost of the cloud spend. With the cloud, you can track your resource use in real time, monitor resources to ensure that you’re using them in the most efficient way, and apply data analytics to find patterns and trends that help better plan resource deployments. By operating in the cloud and using cloud analytics and information, you can predict future costs and adjust your resources as needed. You can even use tools like the Total Cost of Ownership (TCO) or Pricing Calculator to get an estimate of potential cloud spend.
+
+## Automation
+Azure let you automate frequent, time-consuming cloud-based tasks that can easily lead to errors into efficient and easy to control automation jobs that boost overall performance and reduce operational costs.
 ## Management of the Cloud
 Management of the cloud speaks to managing your cloud resources. In the cloud, you can:
 - Automatically scale resource deployment based on need.
